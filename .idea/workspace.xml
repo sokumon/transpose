@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0561a7d-eb1e-43e4-be4c-c8136063b68a" name="Changes" comment="Removed unnecessary code">
+    <list default="true" id="a0561a7d-eb1e-43e4-be4c-c8136063b68a" name="Changes" comment="API is ready to rock!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/popup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,18 +32,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2021.3.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2021.3.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="HTTP Request.rest-api_7 | Send POST request with json body">
+}</component>
+  <component name="RunManager" selected="JavaScript Debug.popup.html">
     <configuration name="rest-api_7 | Send POST request with json body" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_7.http" requestIdentifier="Send POST request with json body" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="popup.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/transpose/frontend/popup.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/backend/index.js" working-dir="$PROJECT_DIR$/backend">
@@ -48,6 +54,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.popup.html" />
         <item itemvalue="HTTP Request.rest-api_7 | Send POST request with json body" />
         <item itemvalue="Node.js.index.js" />
       </list>
@@ -61,7 +68,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655963276854</updated>
-      <workItem from="1655963279838" duration="1924000" />
+      <workItem from="1655963279838" duration="2670000" />
+      <workItem from="1655966734866" duration="1466000" />
     </task>
     <task id="LOCAL-00001" summary="Removed unnecessary code">
       <created>1655963914690</created>
@@ -77,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655963966916</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="API is ready to rock!">
+      <created>1655965291838</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655965291838</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +111,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removed unnecessary code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary code" />
+    <MESSAGE value="API is ready to rock!" />
+    <option name="LAST_COMMIT_MESSAGE" value="API is ready to rock!" />
   </component>
 </project>
