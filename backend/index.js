@@ -1,7 +1,6 @@
-
 require('dotenv').config()
 const express = require('express');
-const axios= require('axios').default
+const axios = require('axios').default
 const app = express();
 const cors = require('cors');
 const port = process.env.PORT || 3000;
@@ -14,27 +13,36 @@ app.use(express.json());
 app.use(require('./GoogleCSE'));
 
 app.get('/', (req, res) => {
-  res.send('Hello Transposers')
+    res.send('Hello Transposers')
 })
 
-app.post('/sendsongname',function(req,response){
-    var song_links=[]
+  app.post('/sendsongname', async  function (req, response) {
+    const song_links = [];
     console.log(req.body.songname)
     console.log(req.body.platforms)
-    chossen_platforms=req.body.platforms
-    chossen_platforms.forEach(async element => {
-      const test =await sendRequest(element,req.body.songname,song_links)
-      console.log(test)
-    });
-    
-  });
+    chossen_platforms = req.body.platforms
+    for (const platform of chossen_platforms) {
+        const songLink = await sendRequest(platform, req.body.songname, song_links)
+        const songOBJ = {
+            platform: platform,
+            link: songLink
+        }
+        song_links.push(songOBJ)
+
+    }
+    response.send(song_links)
+          console.log(song_links)
+  }
+
+  );
 
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
-function sendRequest(platform,songname,ar) {
-    return axios.get(`http://localhost:3000/search?q=${platform} ${songname}`).then(json => {
+
+function sendRequest(platform, songname, ar) {
+    return axios.get(`http://localhost:${port}/search?q=${platform} ${songname}`).then(json => {
         return json.data.items[0].link
     });
 }
