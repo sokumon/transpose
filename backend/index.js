@@ -30,8 +30,9 @@ app.get('/', (req, res) => {
         song_links.push(songOBJ)
 
     }
+    response.setHeader('Content-Type', 'application/json');
     response.send(song_links)
-          console.log(song_links)
+    console.log(song_links)
   }
 
   );
