@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'music';
+            src: url(symphony.ttf) format('truetype');
+        }
+        body{
+            width: 400px;
+            height: 400px;
+        }
+        h1{
+            font-size: 50px;
+            font-family: 'music', Fallback, sans-serif;
+        }
+        .userinteractive{
+            text-align: center;
+            font-size:30px;
+        }
+        h1,h4{
+            text-align: center;
+        }
+        div>input{
+            width: 350px;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transpose</h1>
+    <h4>Divided by Streaming Platforms United by Our Love For Music</h2>
+    <div class="userinteractive">
+        <label for="">Song Name:</label><br>
+        <input type="text" name="songname" id="songname" width="150px">
+    </div>
+    <div class="buttons">
+        <button id="callthebackend">Copy Results to Clipboard</button>
+        <button id="settings">Settings</button>
+    </div>
+</body>
+</html>
