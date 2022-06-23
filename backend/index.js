@@ -33,21 +33,8 @@ app.post('/sendsongname',function(req,response){
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
-function sendRequest(platform,songname,ar){
-  var test1=axios.get(`http://localhost:3000/search?q=${platform} ${songname}`).then(json=>{
-    return json.data.items[0].link
-  })
-  return test1;
-  
-    
-  // })
-  // .catch(function (error) {
-  //   console.log(error);
-  // })
-  // return list_of_objs
-}
-
-function revData(platform,songlink,ar){
-  console.log(ar.length)
-  ar.push(songlink)
+function sendRequest(platform,songname,ar) {
+    return axios.get(`http://localhost:3000/search?q=${platform} ${songname}`).then(json => {
+        return json.data.items[0].link
+    });
 }
