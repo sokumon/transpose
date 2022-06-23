@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     res.send('Hello Transposers')
 })
 
-  app.post('/sendsongname', async  function (req, response) {
+app.post('/sendsongname', async function (req, response) {
     const song_links = [];
     console.log(req.body.songname)
     console.log(req.body.platforms)
@@ -24,17 +24,14 @@ app.get('/', (req, res) => {
     for (const platform of chossen_platforms) {
         const songLink = await sendRequest(platform, req.body.songname, song_links)
         const songOBJ = {
-            platform: platform,
-            link: songLink
+            platform: platform, link: songLink
         }
         song_links.push(songOBJ)
 
     }
     response.send(song_links)
-          console.log(song_links)
-  }
-
-  );
+    console.log(song_links)
+});
 
 
 app.listen(port, () => {

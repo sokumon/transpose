@@ -5,43 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        @font-face {
-            font-family: 'music';
-            src: url(symphony.ttf) format('truetype');
-        }
-        body{
-            width: 400px;
-            height: 400px;
-        }
-        h1{
-            font-size: 50px;
-            font-family: 'music', Fallback, sans-serif;
-        }
-        .userinteractive{
-            text-align: center;
-            font-size:30px;
-        }
-        h1,h4{
-            text-align: center;
-        }
-        div>input{
-            width: 350px;
-            font-size:20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="testing.js"></script>
 </head>
 <body>
-    <h1>Transpose</h1>
-    <h4>Divided by Streaming Platforms United by Our Love For Music</h2>
-    <div class="userinteractive">
-        <label for="">Song Name:</label><br>
-        <input type="text" name="songname" id="songname" width="150px">
+<h1 class="heading">Transpose </h1>
+<h3 class="slogan"><em>Divided by Streaming Platforms <br>United by Our Love For Music</em></h3>
+<form class="user_interactive">
+    <label for="song_name">Song Name:</label><br>
+    <input type="text" name="song_name" id="song_name">
+    <label for="checkboxes">Choose Platforms:</label>
+    <div id="checkboxes">
+        <label for="appleMusic">
+            <input type="checkbox" id="appleMusic" checked/>Apple Music</label>
+        <label for="amazonMusic">
+            <input type="checkbox" id="amazonMusic" checked/>Amazon Music</label>
+        <label for="gaana">
+            <input type="checkbox" id="gaana" checked/>Gaana</label>
+        <label for="hungama">
+            <input type="checkbox" id="hungama" checked/>Hungama</label>
+        <label for="wynk">
+            <input type="checkbox" id="wynk" checked/>Wynk</label>
+        <label for="spotify">
+            <input type="checkbox" id="spotify" checked/>Spotify</label>
+        <label for="youtube_Music">
+            <input type="checkbox" id="youtube_Music" checked/>Youtube Music</label>
     </div>
-    <div class="buttons">
-        <button id="callthebackend">Copy Results to Clipboard</button>
-        <button id="settings">Settings</button>
-    </div>
-    <script src="testing.js"></script>
+    <button type="submit" class="send_request">
+        <svg xmlns="http://www.w3.org/2000/svg" class="search_icon" viewBox="0 0 24 24" stroke="#007fff"
+             stroke-width="2">
+
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+
+        </svg>
+        <p>Copy to Clipboard</p>
+    </button>
+</form>
+<footer class="footer"> Made with <strike>love &hearts;</strike> hardwork by <a href="https://github.com/sokumon"
+                                                                                target="_blank">Soham K.</a> and <a
+        href="https://github.com/itssabhishek" target="_blank">Abhishek T.</a> <br>
+    <a href="https://github.com/sokumon/transpose" target="_blank"><img src="github-logo.png"
+                                                                        alt="Contribute on Github" style="padding: 6px"></a></footer>
 </body>
 </html>
