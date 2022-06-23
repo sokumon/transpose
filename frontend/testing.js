@@ -5,6 +5,7 @@ var sname=document.getElementById("songname")
 console.log(submit.innerText)
 // fetch from our own /sendsongname endpoint
 // make the settings wala ui
+
 // send it accrordingly 
 //copy the results to clipboard
 submit.addEventListener("click",submitbutton)
