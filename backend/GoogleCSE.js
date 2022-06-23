@@ -14,7 +14,7 @@ www.our-domain.com/search
 */
 router.get('/search', (req, res, next) => {
     const { q, start, num } = req.query;
-    console.log(q, start, num);
+    // console.log(q, start, num);
 
     customsearch.cse.list({
         auth: process.env.GOOGLE_API_KEY,

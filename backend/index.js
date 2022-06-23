@@ -1,6 +1,7 @@
 
 require('dotenv').config()
 const express = require('express');
+const axios= require('axios').default
 const app = express();
 const cors = require('cors');
 const port = process.env.PORT || 3000;
@@ -16,14 +17,37 @@ app.get('/', (req, res) => {
   res.send('Hello Transposers')
 })
 
-app.post('/sendsongname',function(req,res){
+app.post('/sendsongname',function(req,response){
+    var song_links=[]
     console.log(req.body.songname)
-    
-    res.end("yes");
+    console.log(req.body.platforms)
+    chossen_platforms=req.body.platforms
+    chossen_platforms.forEach(async element => {
+      const test =await sendRequest(element,req.body.songname,song_links)
+      console.log(test)
     });
+    
+  });
+
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
+function sendRequest(platform,songname,ar){
+  var test1=axios.get(`http://localhost:3000/search?q=${platform} ${songname}`).then(json=>{
+    return json.data.items[0].link
+  })
+  return test1;
+  
+    
+  // })
+  // .catch(function (error) {
+  //   console.log(error);
+  // })
+  // return list_of_objs
+}
 
-
+function revData(platform,songlink,ar){
+  console.log(ar.length)
+  ar.push(songlink)
+}
