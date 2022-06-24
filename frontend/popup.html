@@ -2,50 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="testing.js"></script>
+    <link href="public/style.css" rel="stylesheet">
+
 </head>
 <body>
 <h1 class="heading">Transpose </h1>
 <h3 class="slogan"><em>Divided by Streaming Platforms <br>United by Our Love For Music</em></h3>
 <form class="user_interactive">
     <label for="song_name">Song Name:</label><br>
-    <input type="text" name="song_name" id="song_name">
+    <input id="song_name" name="song_name" type="text">
     <label for="checkboxes">Choose Platforms:</label>
     <div id="checkboxes">
         <label for="appleMusic">
-            <input type="checkbox" id="appleMusic" checked/>Apple Music</label>
+            <input checked id="appleMusic" type="checkbox"/>Apple Music</label>
         <label for="amazonMusic">
-            <input type="checkbox" id="amazonMusic" checked/>Amazon Music</label>
+            <input checked id="amazonMusic" type="checkbox"/>Amazon Music</label>
         <label for="gaana">
-            <input type="checkbox" id="gaana" checked/>Gaana</label>
+            <input checked id="gaana" type="checkbox"/>Gaana</label>
         <label for="hungama">
-            <input type="checkbox" id="hungama" checked/>Hungama</label>
+            <input checked id="hungama" type="checkbox"/>Hungama</label>
         <label for="wynk">
-            <input type="checkbox" id="wynk" checked/>Wynk</label>
+            <input checked id="wynk" type="checkbox"/>Wynk</label>
         <label for="spotify">
-            <input type="checkbox" id="spotify" checked/>Spotify</label>
+            <input checked id="spotify" type="checkbox"/>Spotify</label>
         <label for="youtube_Music">
-            <input type="checkbox" id="youtube_Music" checked/>Youtube Music</label>
+            <input checked id="youtube_Music" type="checkbox"/>Youtube Music</label>
     </div>
-    <button type="submit" class="send_request">
-        <svg xmlns="http://www.w3.org/2000/svg" class="search_icon" viewBox="0 0 24 24" stroke="#007fff"
-             stroke-width="2">
 
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+    <button class="send_request" type="submit">
+        <span class="copy">
+            <svg class="copy_icon" stroke="#007fff" stroke-width="2" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+
+            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
 
         </svg>
         <p>Copy to Clipboard</p>
+        </span>
+
+        <span class="copied ">
+            <svg class="check_icon" stroke="#007fff" stroke-width="2" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <p>Copied</p>
+        </span>
     </button>
 </form>
-<footer class="footer"> Made with <strike>love &hearts;</strike> hardwork by <a href="https://github.com/sokumon"
-                                                                                target="_blank">Soham K.</a> and <a
-        href="https://github.com/itssabhishek" target="_blank">Abhishek T.</a> <br>
-    <a href="https://github.com/sokumon/transpose" target="_blank"><img src="github-logo.png"
-                                                                        alt="Contribute on Github" style="padding: 6px"></a></footer>
+<footer class="footer">
+    Made with <strike>love &hearts;</strike> hardwork by
+    <a href="https://github.com/sokumon"
+       target="_blank">Soham K.</a> and
+    <a href="https://github.com/itssabhishek" target="_blank">Abhishek T.</a> <br>
+    <a href="https://github.com/sokumon/transpose" target="_blank">
+        <img alt="Contribute on Github" src="public/images/github-logo.png" style="padding: 6px">
+    </a>
+</footer>
+<script defer src="testing.js">
+</script>
 </body>
 </html>
