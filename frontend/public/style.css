@@ -17,7 +17,8 @@ body {
     height: 450px;
     padding: 1rem;
 }
-p{
+
+p {
     font-family: 'Roboto', sans-serif;
 
 }
@@ -65,27 +66,30 @@ input[type='text']:focus {
 }
 
 
-.search_icon {
+.copy_icon {
     height: 30px;
     width: 30px;
     border-right: 2px solid var(--font-heading);
-    padding:0 5px;
+    padding: 0 5px;
+}
+
+.check_icon {
+    height: 30px;
+    width: 30px;
+    padding: 0 5px;
 }
 
 .send_request {
     margin-top: 1rem;
     width: 100%;
     border: 2px solid var(--font-heading);
-    display: flex;
     background-color: transparent;
-    align-items: center;
-    justify-content: space-between;
     cursor: pointer;
     padding: 5px 0;
     border-radius: 4px;
-    box-shadow: 0px 4px 6px -1px var(--font-heading);
-    -webkit-box-shadow: 0px 4px 6px -1px var(--font-heading);
-    -moz-box-shadow: 0px 4px 6px -1px var(--font-heading);
+    box-shadow: 0 4px 6px -1px var(--font-heading);
+    -webkit-box-shadow: 0 4px 6px -1px var(--font-heading);
+    -moz-box-shadow: 0 4px 6px -1px var(--font-heading);
     transition: all .2s;
 }
 
@@ -95,12 +99,32 @@ input[type='text']:focus {
 
 }
 
-.send_request > p {
+
+.copy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copy > p {
     font-size: 16px;
     margin: 0 auto;
     color: var(--font-heading);
 
 }
+
+.copied {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.copied > p {
+    font-size: 16px;
+    margin: 0 4px;
+    color: var(--font-heading);
+}
+
 
 #checkboxes {
     display: flex;
