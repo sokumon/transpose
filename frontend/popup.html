@@ -5,32 +5,39 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Document</title>
+
     <link href="public/style.css" rel="stylesheet">
+
 
 </head>
 <body>
 <h1 class="heading">Transpose </h1>
 <h3 class="slogan"><em>Divided by Streaming Platforms <br>United by Our Love For Music</em></h3>
-<form class="user_interactive">
+<form class="user_interactive" id="user_input">
     <label for="song_name">Song Name:</label><br>
     <input id="song_name" name="song_name" type="text">
     <label for="checkboxes">Choose Platforms:</label>
     <div id="checkboxes">
         <label for="appleMusic">
-            <input checked id="appleMusic" type="checkbox"/>Apple Music</label>
+
+            <input type="checkbox" name="platform" id="Apple Music" checked >Apple Music</label>
         <label for="amazonMusic">
-            <input checked id="amazonMusic" type="checkbox"/>Amazon Music</label>
+            <input type="checkbox" name="platform" id="Amazon Music" checked/>Amazon Music</label>
         <label for="gaana">
-            <input checked id="gaana" type="checkbox"/>Gaana</label>
+            <input type="checkbox" name="platform" id="Gaana" checked/>Gaana</label>
         <label for="hungama">
-            <input checked id="hungama" type="checkbox"/>Hungama</label>
+            <input type="checkbox" name="platform" id="Hungama" checked/>Hungama</label>
         <label for="wynk">
-            <input checked id="wynk" type="checkbox"/>Wynk</label>
+            <input type="checkbox" name="platform" id="Wynk" checked/>Wynk</label>
         <label for="spotify">
-            <input checked id="spotify" type="checkbox"/>Spotify</label>
+            <input type="checkbox" name="platform" id="Spotify" checked/>Spotify</label>
         <label for="youtube_Music">
-            <input checked id="youtube_Music" type="checkbox"/>Youtube Music</label>
+            <input type="checkbox" name="platform" id="Youtube Music" checked/>Youtube Music</label>
     </div>
+    <button type="submit" class="send_request" id="send_request">
+        <svg xmlns="http://www.w3.org/2000/svg" class="search_icon" viewBox="0 0 24 24" stroke="#007fff"
+             stroke-width="2">
+
 
     <button class="send_request" type="submit">
         <span class="copy">
@@ -54,6 +61,7 @@
         </span>
     </button>
 </form>
+
 <footer class="footer">
     Made with <strike>love &hearts;</strike> hardwork by
     <a href="https://github.com/sokumon"

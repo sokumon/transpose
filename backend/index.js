@@ -29,6 +29,7 @@ app.post('/sendsongname', async function (req, response) {
         song_links.push(songOBJ)
 
     }
+    response.setHeader('Content-Type', 'application/json');
     response.send(song_links)
     console.log(song_links)
 });
@@ -41,5 +42,7 @@ app.listen(port, () => {
 function sendRequest(platform, songname, ar) {
     return axios.get(`http://localhost:${port}/search?q=${platform} ${songname}`).then(json => {
         return json.data.items[0].link
+    }).catch(err=>{
+        console.log(err)
     });
 }
