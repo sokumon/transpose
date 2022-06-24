@@ -1,6 +1,6 @@
 require('dotenv').config()
 const express = require('express');
-const { google } = require('googleapis');
+const { google, customsearch_v1 } = require('googleapis');
 
 //This will create express router instance
 const router = express.Router();
@@ -15,14 +15,13 @@ www.our-domain.com/search
 router.get('/search', (req, res, next) => {
     const { q, start, num } = req.query;
     // console.log(q, start, num);
-
-    customsearch.cse.list({
+    // customsearch_v1.Resource$Cse$Siterestrict
+    customsearch.cse.siterestrict.list({
         auth: process.env.GOOGLE_API_KEY,
         cx: process.env.SEARCH_ENGINE_ID,
-        q, start, num
-    })
-        .then(result => result.data)
-        .then((result) => {
+        q, start, num,
+    }).then(result => result.data)
+    .then((result) => {
             const { queries, items, searchInformation } = result;
 
             const page = (queries.request || [])[0] || {};
@@ -50,6 +49,8 @@ router.get('/search', (req, res, next) => {
             console.log(err);
             res.status(500).send(err);
         });
+
+
 })
 
 module.exports = router;
