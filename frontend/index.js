@@ -2,11 +2,9 @@
 const sendButton = document.getElementsByClassName("send_request")[0];
 const copy = document.getElementsByClassName("copy")[0];
 const copied = document.getElementsByClassName("copied")[0];
-sendButton.addEventListener("click", changeUI);
 
-function changeUI(e) {
+function changeUI() {
   //very important or UI will get refreshed with speed of light and your changes won't be visible
-  e.preventDefault();
 
   copy.style.display = "none";
   copied.style.display = "flex";
@@ -55,9 +53,7 @@ form.addEventListener("submit",(event)=>{
 
 })
 
-function submitbutton(){
-    
-}
+
 
 function formattheMessage(jsonRes,sname){
     var str_clip=""
@@ -69,6 +65,6 @@ function formattheMessage(jsonRes,sname){
     }
     console.log(str_clip)
     navigator.clipboard.writeText(str_clip)
-    
+    changeUI()
 
 }
