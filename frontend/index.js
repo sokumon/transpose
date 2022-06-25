@@ -36,7 +36,7 @@ form.addEventListener("submit", (event) => {
       platforms: platforms_user,
     };
 
-    fetch("https://transpose-app.herokuapp.com//sendsongname", {
+    fetch("https://transpose-app.herokuapp.com/sendsongname", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
