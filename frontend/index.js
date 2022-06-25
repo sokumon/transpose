@@ -62,6 +62,11 @@ function formattheMessage(jsonRes, sname) {
     console.log(jsonRes[i].link);
   }
   console.log(str_clip);
-  navigator.clipboard.writeText(str_clip);
-  changeUI();
+  navigator.clipboard.writeText(str_clip).then(res=>{
+    console.log(res)
+    changeUI();
+    sname.value=""
+  }).catch(err=>{
+    console.log(err)
+  })
 }
