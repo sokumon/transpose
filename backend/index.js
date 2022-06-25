@@ -3,6 +3,7 @@ const express = require('express');
 const axios = require('axios').default
 const app = express();
 const cors = require('cors');
+const { json } = require('express');
 const port = process.env.PORT || 3000;
 
 //Include these two lines or express will screw you
@@ -46,3 +47,4 @@ function sendRequest(platform, songname, ar) {
         console.log(err)
     });
 }
+
