@@ -45,7 +45,14 @@ form.addEventListener("submit", (event) => {
     })
       .then((response) => response.json())
       .then((body) => {
+        if(body[0].error){
+          sendButton.children[0].children[0].remove()
+          sendButton.children[0].children[0].innerHTML="Please Come Back Later"
+          sname.style.color="Red"
+          sname.value="Error has occured"
+        }else{
         formattheMessage(body, sname);
+        }
       })
       .catch((err) => {
         console.log(err);
