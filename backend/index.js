@@ -50,7 +50,7 @@ app.listen(port, () => {
 
 function sendRequest(platform, songname, ar) {
     return axios.get(`http://localhost:${port}/search?q=${platform} ${songname}`).then(json => {
-        if(!res.json.data[0].link){
+        if(!json.data[0].link){
             return json.data.items[0].link
         }
     }).catch(error=>{
