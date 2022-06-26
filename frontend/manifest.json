@@ -3,6 +3,9 @@
   "description": "Divided by Streaming Platforms United by Our Love For Music",
   "version": "1.0",
   "manifest_version": 3,
+  "host_permissions": [
+    "https://transpose-app.herokuapp.com/*"
+  ],
   "icons": {
     "16": "public/images/16.png",
     "32": "public/images/32.png",

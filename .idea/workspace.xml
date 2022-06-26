@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0561a7d-eb1e-43e4-be4c-c8136063b68a" name="Changes" comment="Added 'Copied' message on button after it gets clicked">
+    <list default="true" id="a0561a7d-eb1e-43e4-be4c-c8136063b68a" name="Changes" comment="Some unnecessary changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/manifest.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +28,11 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/frontend/manifest.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/frontend/popup.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/frontend/public/style.css" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="HttpClientSelectedEnvironments">
     <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
@@ -97,6 +103,15 @@
       <workItem from="1655971361042" duration="16143000" />
       <workItem from="1656031758506" duration="7258000" />
       <workItem from="1656040093523" duration="435000" />
+      <workItem from="1656151045027" duration="36000" />
+      <workItem from="1656155361907" duration="261000" />
+      <workItem from="1656203927882" duration="655000" />
+      <workItem from="1656206276134" duration="37000" />
+      <workItem from="1656206438370" duration="950000" />
+      <workItem from="1656227171356" duration="16000" />
+      <workItem from="1656239106298" duration="959000" />
+      <workItem from="1656240242760" duration="431000" />
+      <workItem from="1656241849937" duration="25000" />
     </task>
     <task id="LOCAL-00001" summary="Removed unnecessary code">
       <created>1655963914690</created>
@@ -140,7 +155,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656039235178</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Made code little 'Modern'">
+      <created>1656150695401</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656150695401</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Some unnecessary changes">
+      <created>1656239472287</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1656239472287</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +192,9 @@
     <MESSAGE value="Some unnecessary testings" />
     <MESSAGE value="UI done" />
     <MESSAGE value="Added 'Copied' message on button after it gets clicked" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added 'Copied' message on button after it gets clicked" />
+    <MESSAGE value="Made code little 'Modern'" />
+    <MESSAGE value="Some unnecessary changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some unnecessary changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

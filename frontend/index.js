@@ -16,7 +16,6 @@ function changeUI() {
   }, 2000);
 }
 
-console.log("Can this even work??");
 const form = document.getElementById("user_input");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -45,13 +44,14 @@ form.addEventListener("submit", (event) => {
     })
       .then((response) => response.json())
       .then((body) => {
-        if(body[0].error){
-          sendButton.children[0].children[0].remove()
-          sendButton.children[0].children[0].innerHTML="Please Come Back Later"
-          sname.style.color="Red"
-          sname.value="Error has occured"
-        }else{
-        formattheMessage(body, sname);
+        if (body[0].error) {
+          sendButton.children[0].children[0].remove();
+          sendButton.children[0].children[0].innerHTML =
+            "Please Come Back Later";
+          sname.style.color = "Red";
+          sname.value = "Error has occured";
+        } else {
+          formattheMessage(body, sname);
         }
       })
       .catch((err) => {
@@ -69,11 +69,14 @@ function formattheMessage(jsonRes, sname) {
     console.log(jsonRes[i].link);
   }
   console.log(str_clip);
-  navigator.clipboard.writeText(str_clip).then(res=>{
-    console.log(res)
-    changeUI();
-    sname.value=""
-  }).catch(err=>{
-    console.log(err)
-  })
+  navigator.clipboard
+    .writeText(str_clip)
+    .then((res) => {
+      console.log(res);
+      changeUI();
+      sname.value = "";
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
