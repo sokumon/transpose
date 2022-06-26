@@ -45,9 +45,12 @@ router.get('/search', (req, res, next) => {
             // res.status(200).send(result);
             res.status(200).send(data);
         })
-        .catch((err) => {
-            console.log(err);
-            res.status(500).send(err);
+        .catch((error) => {
+            if (error.response) {
+                // console.log(error.response.status);
+                res.status(error.response.status).send("API Error");
+            }
+            
         });
 
 
